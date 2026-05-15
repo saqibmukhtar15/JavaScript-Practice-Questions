@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Practice Questions - Assignment 04</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>JavaScript Assignment 04</h1>
+
+    <!-- 1. Variables (let, const, var) -->
+    <div class="sections">
+        <div class="section-01">
+            <h3>1. Variables (let, const, var)</h3>
+            <ol>
+                <li>let, const, aur var mein difference likho.</li>
+                <li>Ek variable userName banao aur usme apna naam store karo. Console mein print karo.</li>
+                <li>const variable ko dubara value assign karne par kya error aata hai? <br>const age = 20 <br>age = 25</li>
+                <li>Output predict karo: <br>var a = 10 <br>var a = 20 <br>console.log(a)</li>
+                <li>Konsi cheez mutable hai? <br>const array <br>const string <br>const number <br>Explain.</li>
+                <li>Aisa code likho: <br>name = "Hasan" <br>age = 21 <br>city = "Karachi" <br><br>Phir ek sentence print karo: <br>My name is Hasan and I live in Karachi</li>
+            </ol>
+        </div>
+        <div class="section-02">
+            <h3>Answers</h3>
+            <p><strong>Q1 Ans.</strong> <br>let, const aur var mein basic differences:</p>
+            <ul>
+                <li><strong>let:</strong> declare hota hai or redeclare nahi hota hai</li>
+                <li><strong>const:</strong> na to declare hota hai or na redeclare hota hai</li>
+                <li><strong>var:</strong> declare or redeclare hota hai</li>
+            </ul>
+            <p><strong>Q2 Ans.</strong><br>
+                let userName = "Saqib"; <br>
+                console.log(userName);<br>
+                <strong>Output:</strong> Saqib
+            </p>
+            <p><strong>Q3 Ans.</strong> <br>Jab aap const variable ko dubara value assign karte hain, to JavaScript TypeError deta hai.</p>
+            <p><strong>Q4 Ans.</strong><br> <strong>Output:</strong> 20</p>
+            <p><strong>Q5 Ans.</strong><br> <strong>Const array</strong><br>
+                Jab hum const ke saath array banate hain, to variable ka address fix ho jata hai, lekin uske andar ka data badla ja sakta hai.
+            </p>
+            <p><strong>Q6 Ans.</strong><br>
+                let name = "Hasan";<br>
+                let age = 21;<br>
+                let city = "Karachi";<br><br>
+                console.log(`My name is ${name} and I live in ${city}`);<br><br>
+                <strong>Output:</strong> My name is Hasan and I live in Karachi
+            </p>
+        </div>
+    </div>
+
+    <!-- 2. String Methods -->
+    <div class="sections">
+        <div class="section-01">
+            <h3>2. String Methods</h3>
+            <ol>
+                <li>.toUpperCase() aur .toLowerCase() kya karte hain?</li>
+                <li>Output predict karo: let str = "javascript" console.log(str.slice(0,4))</li>
+                <li>Ek string "Muhammad Hasan" mein se "Hasan" extract karo using slice().</li>
+                <li>.charAt() aur indexing mein kya difference hai?</li>
+                <li>User ka naam "hAsAn" ho to usko proper lowercase mein convert karo. <br>Expected: hasan</li>
+                <li>Ek paragraph ko words array mein convert karo using split(). "My name is Hasan"</li>
+            </ol>
+        </div>
+        <div class="section-02">
+            <h3>Answers</h3>
+            <p><strong>Q1 Ans.</strong><br>
+                <strong>.toUpperCase():</strong> Ye method string ke tamam letters ko Capital (Badi ABC) mein convert kar deta hai.<br>
+                <strong>.toLowerCase():</strong> Ye method string ke tamam letters ko Small (Choti abc) mein convert kar deta hai.
+            </p>
+            <p><strong>Q2 Ans.</strong> <br><strong>Output:</strong> java</p>
+            <p><strong>Q3 Ans.</strong><br>
+                let name = "Muhammad Hasan"<br>
+                console.log(name.slice(9,14))<br>
+                <strong>Output:</strong> Hassan
+            </p>
+            <p><strong>Q4 Ans.</strong><br>
+                <strong>charAt(index):</strong> Agar index galat ho to empty string return karta hai.<br>
+                <strong>Indexing (str[index]):</strong> Agar index galat ho to undefined return hota hai.
+            </p>
+            <p><strong>Q5 Ans.</strong><br>
+                let user = "hAsAn";<br>
+                let update = user.toLowerCase();<br><br>
+                console.log(update); <br><br>
+                <strong>Output:</strong> hasan
+            </p>
+            <p><strong>Q6 Ans.</strong><br>
+                let para = "My name is Hasan";<br>
+                let words = para.split(" ");<br><br>
+                console.log(words);<br><br>
+                <strong>Output:</strong> ["My", "name", "is", "Hasan"]
+            </p>
+        </div>
+    </div>
+
+    <!-- 3. Arrays -->
+    <div class="sections">
+        <div class="section-01">
+            <h3>3. Arrays</h3>
+            <ol>
+                <li>Array kya hota hai?</li>
+                <li>Ek fruits array banao jisme 5 fruits hon.</li>
+                <li>push() aur pop() kya karte hain?</li>
+                <li>Output predict karo: <br>let arr = ["a","b","c"] <br>arr.splice(1,1,"z") <br>console.log(arr)</li>
+                <li>Ek array ka first aur last element print karo.</li>
+                <li>Nested array mein "orange" access karo: <br>let fruits = [["apple"],["banana","orange"]]</li>
+            </ol>
+        </div>
+        <div class="section-02">
+            <h3>Answers</h3>
+            <p><strong>Q1 Ans.</strong><br> Array ek aisa special variable hota hai jo ek se zyada values ko ek list ki surat mein store kar sakta hai. Array ke andar har value ka ek specific index (number) hota hai, jo hamesha 0 se shuru hota hai.</p>
+            <p><strong>Q2 Ans.</strong><br> let fruits = ["Apple", "Banana", "Mango", "Orange", "Strawberry"];</p>
+            <p><strong>Q3 Ans.</strong><br>
+                <strong>push():</strong> Ye method array ke end me new element add karta hai.<br>
+                <strong>pop():</strong> Ye method array ke end se element remove karta hai.
+            </p>
+            <p><strong>Q4 Ans.</strong> <br><strong>Output:</strong> ["a", "z", "c"]</p>
+            <p><strong>Q5 Ans.</strong><br>
+                let arr = [10, 20, 30];<br>
+                arr.splice(1,1)<br><br>
+                console.log(arr);<br><br>
+                <strong>Output:</strong> [10,30]
+            </p>
+            <p><strong>Q6 Ans.</strong><br>
+                let fruits = [["apple"], ["banana", "orange"]];<br><br>
+                console.log(fruits[1][1]);<br><br>
+                <strong>Output:</strong> orange
+            </p>
+        </div>
+    </div>
+
+    <!-- 4. Array Methods -->
+    <div class="sections">
+        <div class="section-01">
+            <h3>4. Array Methods</h3>
+            <ol>
+                <li>slice() aur splice() mein difference likho.</li>
+                <li>Ek array mein "Ali" add karo index 2 par using splice().</li>
+                <li>Array mein se 2 elements remove karo using splice().</li>
+                <li>Output predict karo: <br>let arr = [1,2,3,4] <br>console.log(arr.slice(1,3))</li>
+                <li>shift() aur unshift() kya karte hain?</li>
+                <li>Ek students array ki copy banao using slice().</li>
+            </ol>
+        </div>
+        <div class="section-02">
+            <h3>Answers</h3>
+            <p><strong>Q1 Ans.</strong><br>
+                <strong>slice():</strong> ye method array me se copy karta hai.<br>
+                <strong>splice():</strong> ye method array ke kisi bhi area se elements ko add, remove, ya replace karta hai.
+            </p>
+            <p><strong>Q2 Ans.</strong><br>
+                let students = ["Hasan", "Ahmed", "Sara"];<br>
+                students.splice(2, 0, "Ali"); <br><br>
+                console.log(students); <br><br>
+                <strong>Output:</strong> ["Hasan", "Ahmed", "Ali", "Sara"]
+            </p>
+            <p><strong>Q3 Ans.</strong><br>
+                let numbers = [10, 20, 30, 40, 50];<br>
+                numbers.splice(1, 2); <br><br>
+                console.log(numbers); <br><br>
+                <strong>Output:</strong> [10, 40, 50]
+            </p>
+            <p><strong>Q4 Ans.</strong><br> <strong>Output:</strong> [2, 3]</p>
+            <p><strong>Q5 Ans.</strong><br>
+                <strong>shift():</strong> Ye method array ke start se element remove karta hai.<br>
+                <strong>unshift():</strong> Ye method array ke start me new element add karta hai.
+            </p>
+            <p><strong>Q6 Ans.</strong><br>
+                let students = ["Ali", "Hasan", "Sara"];<br><br>
+                let copy = students.slice();<br><br>
+                console.log(copy);<br><br>
+                <strong>Output:</strong> ["Ali", "Hasan", "Sara"]
+            </p>
+        </div>
+    </div>
+
+    <!-- 5. Objects -->
+    <div class="sections">
+        <div class="section-01">
+            <h3>5. Objects</h3>
+            <ol>
+                <li>Object kya hota hai?</li>
+                <li>Ek student object banao: name, age, email</li>
+                <li>Object ki property access karne ke 2 tareeqe likho.</li>
+                <li>Output predict karo: <br>let user = { <br>name : "Hasan" <br>} <br>console.log(user.age)</li>
+                <li>Object mein new property add karo: city : "Karachi"</li>
+                <li>Ek object ka pura intro print karo: My name is Hasan and my age is 21</li>
+            </ol>
+        </div>
+        <div class="section-02">
+            <h3>Answers</h3>
+            <p><strong>Q1 Ans.</strong><br> Object ek aisa data structure hai jo complex data ko organize karne ke kaam aata hai. Ye ek container ki tarah hai jo kisi cheez ki properties ko organize karta hai.</p>
+            <p><strong>Q2 Ans.</strong><br>
+                let student = {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;name: "Muhammad Hasan",<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;age: 21,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;email: "hasan@example.com"<br>
+                };<br><br>
+                console.log(student);<br><br>
+                <strong>Output:</strong> {name: 'Muhammad Hasan', age: 21, email: 'hasan@example.com'}
+            </p>
+            <p><strong>Q3 Ans.</strong><br>
+                <strong>Dot Notation:</strong> student.name (Sabse zyada use hota hai)<br>
+                <strong>Bracket Notation:</strong> student["name"]
+            </p>
+            <p><strong>Q4 Ans.</strong> <br><strong>Output:</strong> undefined</p>
+            <p><strong>Q5 Ans.</strong><br>
+                let user = {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;name: "Muhammad Hasan",<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;age: 21,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;email: "hasan@example.com"<br>
+                };<br>
+                user.city = "Karachi";<br><br>
+                console.log(user);<br><br>
+                <strong>Output:</strong> {name: 'Muhammad Hasan', age: 21, email: 'hasan@example.com', city: 'Karachi'}
+            </p>
+            <p><strong>Q6 Ans.</strong><br>
+                let person = {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;name: "Hasan",<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;age: 21<br>
+                };<br><br>
+                console.log(`My name is ${person.name} and my age is ${person.age}`);<br><br>
+                <strong>Output:</strong> My name is Hasan and my age is 21
+            </p>
+        </div>
+    </div>
+
+    <!-- 6. Data Types -->
+    <div class="sections">
+        <div class="section-01">
+            <h3>6. Data Types</h3>
+            <ol>
+                <li>Primitive data types konsay hain?</li>
+                <li>Reference data types konsay hain?</li>
+                <li>undefined aur null mein difference?</li>
+                <li>Output predict karo: <br>let a <br>console.log(a)</li>
+                <li>Check karo type kya hoga: <br>typeof [] <br>typeof {} <br>typeof null</li>
+                <li>Boolean variable banao aur usko toggle karo.</li>
+            </ol>
+        </div>
+        <div class="section-02">
+            <h3>Answers</h3>
+            <p><strong>Q1 Ans.</strong><br> Primitive Data Types: String, Number, Boolean, Undefined, Null</p>
+            <p><strong>Q2 Ans.</strong><br> Reference data types: object, array, function</p>
+            <p><strong>Q3 Ans.</strong><br>
+                <strong>undefined:</strong> Iska matlab hai variable declare toh ho gaya hai, par usme koi value nahi daali gayi.<br>
+                <strong>null:</strong> Yeh ek aisi value hai jo batati hai ki variable khaali hai (empty value).
+            </p>
+            <p><strong>Q4 Ans.</strong> <br><strong>Output:</strong> undefined</p>
+            <p><strong>Q5 Ans.</strong><br>
+                typeof []: "object"<br>
+                typeof {}: "object"<br>
+                typeof null: "object"
+            </p>
+            <p><strong>Q6 Ans.</strong><br>
+                let isActive = true;<br>
+                isActive = !isActive; <br><br>
+                console.log(isActive); <br><br>
+                <strong>Output:</strong> false
+            </p>
+        </div>
+    </div>
+
+    <!-- 7. Conditional Statements -->
+    <div class="sections">
+        <div class="section-01">
+            <h3>7. Conditional Statements</h3>
+            <ol>
+                <li>if else kab use hota hai?</li>
+                <li>Agar number even ho to "Even" print karo warna "Odd".</li>
+                <li>Positive / Negative / Zero checker banao.</li>
+                <li>Output predict karo: <br>let num = 5 <br>if(num > 2){ <br>console.log("A") <br>}<br>else{ <br>console.log("B")<br> }</li>
+                <li>Ek login system banao: <br>email === "admin@gmail.com" <br>password === "123" <br>To "Login Success" print ho.</li>
+                <li>Nested if ka real-world example do.</li>
+            </ol>
+        </div>
+        <div class="section-02">
+            <h3>Answers</h3>
+            <p><strong>Q1 Ans.</strong> <br>Jab humein apne code mein faisla lena ho ke koi kaam sirf tabhi ho jag koi khaas condition poori ho, tab if else use hota hai.</p>
+            <p><strong>Q2 Ans.</strong><br>
+                let num = 7;<br>
+                if(num % 2 === 0){<br>
+                &nbsp;console.log("Even");<br>
+                }else{<br>
+                &nbsp;console.log("Odd");<br>
+                }<br><br>
+                <strong>Output:</strong> Odd
+            </p>
+            <p><strong>Q3 Ans.</strong><br>
+                let n = -3;<br>
+                if (n > 0) {<br>
+                &nbsp;&nbsp;&nbsp;console.log("Positive");<br>
+                } else if (n < 0) {<br>
+                &nbsp;&nbsp;&nbsp;console.log("Negative");<br>
+                } else {<br>
+                &nbsp;&nbsp;&nbsp;console.log("Zero");<br>
+                }<br><br>
+                <strong>Output:</strong> Negative
+            </p>
+            <p><strong>Q4 Ans.</strong> <br><strong>Output:</strong> A</p>
+            <p><strong>Q5 Ans.</strong><br>
+                let email = "admin@gmail.com";<br>
+                let password = "123";<br>
+                if (email === "admin@gmail.com" && password === "123") {<br>
+                &nbsp;&nbsp;&nbsp;console.log("Login Success");<br>
+                } else {<br>
+                &nbsp;&nbsp;&nbsp;console.log("Invalid Credentials");<br>
+                }<br><br>
+                <strong>Output:</strong> Login Success
+            </p>
+            <p><strong>Q6 Ans.</strong><br> Example: ATM withdrawal system<br><br>
+                let cardInserted = true;<br>
+                let pin = 1234;<br>
+                if(cardInserted){<br>
+                &nbsp;&nbsp;if(pin === 1234){<br>
+                &nbsp;&nbsp;&nbsp;console.log("Withdraw Money");<br>
+                &nbsp;&nbsp;}else{<br>
+                &nbsp;&nbsp;&nbsp;console.log("Incorrect PIN");<br>
+                &nbsp;&nbsp;}<br>
+                }else{<br>
+                &nbsp;console.log("Please insert your card");<br>
+                }<br><br>
+                <strong>Output:</strong> Withdraw Money
+            </p>
+        </div>
+    </div>
+
+    <!-- 8. Switch Statement -->
+    <div class="sections">
+        <div class="section-01">
+            <h3>8. Switch Statement</h3>
+            <ol>
+                <li>Switch statement kyun use karte hain?</li>
+                <li>Weekday checker banao.</li>
+                <li>Browser tab switch system banao:<br> home, about, setting</li>
+                <li>Output predict karo: <br>let day = "Friday"; <br>switch(day){<br> case "Friday": console.log("Holiday");<br> break; <br>default: <br>console.log("Working Day");<br> }</li>
+                <li>Switch aur if-else mein difference?</li>
+                <li>Calculator banao using switch: +, -, *, /</li>
+            </ol>
+        </div>
+        <div class="section-02">
+            <h3>Answers</h3>
+            <p><strong>Q1 Ans.</strong> <br>Jab ek variable ke multiple values ko check karna ho.</p>
+            <p><strong>Q2 Ans.</strong><br>
+                let dayNumber = 3;<br>
+                switch (dayNumber) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;case 1: console.log("Monday"); <br>break;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;case 2: console.log("Tuesday"); <br>break;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;case 3: console.log("Wednesday"); <br>break;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;case 4: console.log("Thursday"); <br>break;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;case 5: console.log("Friday"); <br>break;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;case 6: console.log("Saturday"); <br>break;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;case 7: console.log("Sunday");<br> break;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;default: <br>console.log("Invalid Day Number");<br>
+                }<br><br>
+                <strong>Output:</strong> Wednesday
+            </p>
+            <p><strong>Q3 Ans.</strong><br>
+                let currentTab = "about";<br>
+                switch (currentTab) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;case "home": console.log("Welcome to the Homepage!"); <br>break;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;case "about": console.log("Learn more about us on this page."); <br>break;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;case "setting": console.log("Change your account preferences here."); <br>break;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;default: <br>console.log("404: Page Not Found");<br>
+                }<br><br>
+                <strong>Output:</strong> Learn more about us on this page.
+            </p>
+            <p><strong>Q4 Ans.</strong> <br><strong>Output:</strong> Holiday</p>
+            <p><strong>Q5 Ans.</strong> <br>Diffrence between switch and if else:<br>
+                <strong>switch:</strong> Ek single variable par focus karta hai. Bahut saare options ke liye zyada saaf aur readable hai. Mostly equality (===) check karta hai.<br>
+                <strong>if else:</strong> multiple conditions check karta hai. Zyada nested hone par Code ko padhna aur samajhna bohat mushkil ho jata hai. Kisi bhi tarah ki boolean condition check kar sakta hai.
+            </p>
+            <p><strong>Q6 Ans.</strong><br>
+                let num1 = 10;<br>
+                let num2 = 5;<br>
+                let operator = "*";<br>
+                switch (operator) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;case "+": console.log("Result: " + (num1 + num2)); break;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;case "-": console.log("Result: " + (num1 - num2)); break;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;case "*": console.log("Result: " + (num1 * num2)); break;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;case "/":<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(num2 !== 0) { console.log("Result: " + (num1 / num2)); }<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else { console.log("Error: Division by zero"); }<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;default: console.log("Error: Invalid Operator");<br>
+                }<br><br>
+                <strong>Output:</strong> Result: 50
+            </p>
+        </div>
+    </div>
+
+    <!-- 9. Loops -->
+    <div class="sections">
+        <div class="section-01">
+            <h3>9. Loops</h3>
+            <ol>
+                <li>Loop kya hota hai?</li>
+                <li>1 se 10 tak numbers print karo using for loop.</li>
+                <li>Even numbers print karo 1 se 20 tak.</li>
+                <li>Output predict karo: <br>for(let i = 0; i < 3; i++){ <br>console.log(i) <br>}</li>
+                <li>Ek array ke tamaam elements print karo using loop.</li>
+                <li>Nested loop kya hota hai? Real example do.</li>
+            </ol>
+        </div>
+        <div class="section-02">
+            <h3>Answers</h3>
+            <p><strong>Q1 Ans.</strong> <br>Jab hamein koi kaam ya code ka block baar baar execute karna ho, to hum Loop ka use karte hain.</p>
+            <p><strong>Q2 Ans.</strong><br>
+                Code:<br>
+                for(let i = 1; i <= 10; i++) {<br>
+                console.log(i);<br>
+                }<br><br>
+                Output:<br>
+                1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+            </p>
+            <p><strong>Q3 Ans.</strong><br>
+                Code:<br>
+                for(let i = 2; i <= 20; i += 2) {<br>
+                console.log(i);<br>
+                }<br><br>
+                Output:<br>
+                2, 4, 6, 8, 10, 12, 14, 16, 18, 20
+            </p>
+            <p><strong>Q4 Ans.</strong> <br><strong>Output:</strong> 0, 1, 2</p>
+            <p><strong>Q5 Ans.</strong><br>
+                Code:<br>
+                let fruits = ["Apple", "Banana", "Mango", "Orange"];<br>
+                for (let i = 0; i < fruits.length; i++) {<br>
+                console.log(fruits[i]);<br>
+                }<br><br>
+                Output:<br>
+                Apple, Banana, Mango, Orange
+            </p>
+            <p><strong>Q6 Ans.</strong> <br>Jab ek loop ke andar dusra loop maujood ho, toh use Nested Loop kehte hain.<br>
+                <br>Example: Digital Clock. <br>Ek ghari nested loop ki behtareen misal hai. Jab tak minute wala loop 60 baar nahi ghumta, tab tak ghante (hour) wala loop agle number par nahi jata.<br>
+                <br>Outer Loop: Hours, <br>Inner Loop: Minutes<br><br>
+                for (let hour = 1; hour <= 3; hour++) {<br>
+                for (let minute = 0; minute < 60; minute++) {<br>
+                console.log("Hour: " + hour + " - Minute: " + minute);<br>
+                }<br>
+                }
+            </p>
+        </div>
+    </div>
+
+    <!-- 10. Nested Arrays + Nested Loops -->
+    <div class="sections">
+        <div class="section-01">
+            <h3>10. Nested Arrays + Nested Loops</h3>
+            <ol>
+                <li>Nested array kya hota hai?</li>
+                <li>Output predict karo: <br>let arr = [[1,2],[3,4]]; <br>console.log(arr[1][0]);</li>
+                <li>2D fruits array ke tamaam fruits print karo.</li>
+                <li>Ek multiplication table banao using nested loop.</li>
+                <li>Rows aur columns ka concept explain karo.</li>
+                <li>Ye output generate karo: <br>* <br>**<br> ***<br> ****<br> using nested loop.</li>
+            </ol>
+        </div>
+        <div class="section-02">
+            <h3>Answers</h3>
+            <p><strong>Q1 Ans.</strong><br> Jab ek array ke andar mazeed or arrays maujood hon.<br>
+                Example: let students = [["Ali", 22], ["Zara", 20], ["Bilal", 23]];
+            </p>
+            <p><strong>Q2 Ans.</strong> <br><strong>Output:</strong> 3</p>
+            <p><strong>Q3 Ans.</strong><br>
+                let fruitBasket = [<br>
+                &nbsp;&nbsp;&nbsp;["Apple", "Banana"],<br>
+                &nbsp;&nbsp;&nbsp;["Mango", "Orange"],<br>
+                &nbsp;&nbsp;&nbsp;["Grapes", "Pineapple"]<br>
+                ];<br>
+                for (let i = 0; i < fruitBasket.length; i++) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;for (let j = 0; j < fruitBasket[i].length; j++) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(fruitBasket[i][j]);<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                }<br><br>
+                <strong>Output:</strong> Apple, Banana, Mango, Orange, Grapes, Pineapple
+            </p>
+            <p><strong>Q4 Ans.</strong><br>
+                for (let i = 1; i <= 5; i++) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;console.log(`--- Table of ${i} ---`);<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;for (let j = 1; j <= 10; j++) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(`${i} x ${j} = ${i * j}`);<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                }
+            </p>
+            <p><strong>Q5 Ans.</strong><br>
+                <strong>Rows:</strong> Jo lines left to right jati hain, unhe Rows kehte hain.<br>
+                <strong>Columns:</strong> Jo lines top to bottom jati hain, unhe Columns kehte hain.
+            </p>
+            <p><strong>Q6 Ans.</strong><br>
+                for(let i = 1; i <= 4; i++){<br>
+                &nbsp;&nbsp;let stars = "";<br>
+                &nbsp;&nbsp;for(let j = 1; j <= i; j++){<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;stars += "*";<br>
+                &nbsp;&nbsp;}<br>
+                &nbsp;&nbsp;console.log(stars);<br>
+                }<br><br>
+                <strong>Output:</strong> <br>* <br>** <br>*** <br>****
+            </p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
